@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Movies List</title>
-</head>
-<body bgcolor="#e9967a">
-<h1>Movies:</h1>
+<h1>Movies List</h1>
+<table class="Movies List">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Year</th>
+    </tr>
+    </thead>
+    <tbody>
 <% moviesList.forEach((m) => { %>
-    <li> <%= m.title %>
-        <ul>Genre: <%= m.genre %> </ul>
-        <ul>Year: <%= m.year %> </ul>
-    </li>
+<tr>
+    <td><%= m.title %></td>
+        <td> <%= m.genre %> </td>`
+        <td> <%= m.year %> </td>
+</tr>
 <% }); %>
-</body>
+    </tbody>
+</table>
 </html>
 
 
